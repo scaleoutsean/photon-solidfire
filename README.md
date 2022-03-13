@@ -26,5 +26,10 @@ Known issues:
 - /usr/lib/systemd/system/iscsid.service, /usr/lib/systemd/system/iscsi.service, /usr/lib/systemd/system/iscsiuio.service have `@SBINDIR@` instead of `/usr/sbin` in them. Just replace former with the latter and reboot before you enable iSCSI services
 - no man pages are included in these RPMs
 
-Get the v2.1.6-tagged archive file from [Releases](https://github.com/scaleoutsean/photon-solidfire/tags), unarchive and install with RPM. Then run a search-and-replace to fix that known issue above and you can start, enable and configure iSCSI.
+The last two issues appear because the SRPMS spec file which I modelled after Photon OS's open-iscsi 2.1.3, needs changes to account for changes in open-iscsi 2.1.6:
+
+- use "sbindir" for path in systemd service files
+- add man page for the iscsi-gen-initiatorname script
+
+Get the v2.1.6-tagged archive file from [Releases](https://github.com/scaleoutsean/photon-solidfire/tags), unarchive and install with RPM. Then run a search-and-replace on service files to fix the SBINDIR issue above and you can start, enable and configure iSCSI.
 
