@@ -6,6 +6,8 @@ Why? Because then Photon 4.0 can be [used](https://scaleoutsean.github.io/2022/0
 
 Tested with SolidFire 12.3, both direct OS access and containerized apps using NetApp Trident Docker Volume Plugin.
 
+For those who haven't read the documentation: newer Linux systems attaching to SolidFire 12.3 and below must use MD5 as the CHAP authentication algorithm. Set it in iscsid.conf.
+
 ### Version 2.1.3-2 (recommended)
 
 These binaries were built from VMware Photon OS open-iscsi SRPMs.
