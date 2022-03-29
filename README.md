@@ -33,5 +33,7 @@ The last two issues appear because the SRPMS spec file which I modelled after Ph
 - use "sbindir" for path in systemd service files
 - add man page for the iscsi-gen-initiatorname script
 
+**UPDATE:** I reluctantly documented the above details thinking they won't be needed in the long run, but it didn't take long - [Makefile](https://github.com/open-iscsi/open-iscsi/commit/fd14dd8316b1317d3ee2ff28b9d013198be40d70) was overhauled so this problem may be gone in post-v2.1.6 releases!
+
 Get the v2.1.6-tagged archive file from [Releases](https://github.com/scaleoutsean/photon-solidfire/tags), unarchive and install with RPM. Then run a search-and-replace on service files to fix the SBINDIR issue above and you can start, enable and configure iSCSI.
 
